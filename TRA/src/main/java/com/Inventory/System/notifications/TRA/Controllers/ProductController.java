@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/product") //This is the main path for Product directory
 public class ProductController {
 
     @Autowired

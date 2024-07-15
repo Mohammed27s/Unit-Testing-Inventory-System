@@ -22,5 +22,4 @@ public class ProductDetails extends BaseEntity {
     Double price;
     String countryMade; // This is for the country where the product was created
 
-
 }
