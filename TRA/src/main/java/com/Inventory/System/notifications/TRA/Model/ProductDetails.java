@@ -2,11 +2,13 @@ package com.Inventory.System.notifications.TRA.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
 import java.util.Date;
 
-@Entity
 @Data
-public class ProductDetails extends BaseEntity {
+@Entity
+@Table(name = "product_details")
+public class ProductDetails extends BaseEntity  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

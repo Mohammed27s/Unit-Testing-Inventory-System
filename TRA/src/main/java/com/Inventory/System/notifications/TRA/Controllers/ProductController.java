@@ -20,7 +20,7 @@ import java.util.UUID;
 public class ProductController {
 
     @Autowired
-    private ProductRepo productRepository;
+    private ProductRepo productRepo;
 
     @Autowired
     private ProductService productService;
@@ -127,7 +127,7 @@ public class ProductController {
 
     // Endpoint to retrieve products by country of origin.
     @GetMapping("getByCountry")
-    public ResponseEntity<?> getProductByCountryOfOrigin(@RequestParam String country) {
+    public ResponseEntity<?> getByProductCountryMade(@RequestParam String country) {
         try {
             List<Product> result = productService.getProductsByCountryOfOrigin(country);
             return ResponseEntity.ok(result);

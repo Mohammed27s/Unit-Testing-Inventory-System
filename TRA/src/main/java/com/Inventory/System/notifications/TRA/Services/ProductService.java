@@ -48,7 +48,7 @@ public class ProductService {
 
     // Method to delete a product by ID
     public String deleteProduct(Integer id) {
-        Product product = productRepo.getById(id);
+        Product product = productRepo.getProductById(id);
         product.setIsActive(Boolean.FALSE);
         productRepo.save(product);
         return "Success";
