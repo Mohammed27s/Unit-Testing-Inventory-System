@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "orders")
+@Table(name = "orders") //This is Order Table
 public class Order extends BaseEntity {
 
     @OneToMany

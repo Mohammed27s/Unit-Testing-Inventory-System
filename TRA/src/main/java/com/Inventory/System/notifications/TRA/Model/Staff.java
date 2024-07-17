@@ -2,11 +2,13 @@ package com.Inventory.System.notifications.TRA.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 
 @Entity
 @Data
+@Table(name = "staff") //This is Staff Table
 public class Staff extends BaseEntity {
 
     @OneToOne

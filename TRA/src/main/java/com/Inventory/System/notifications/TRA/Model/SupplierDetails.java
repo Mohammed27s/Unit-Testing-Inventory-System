@@ -3,6 +3,7 @@ package com.Inventory.System.notifications.TRA.Model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 //This is Supplier information
 @Entity
 @Data
+@Table(name = "supplier_details") //This is SupplierDetail Table
 public class SupplierDetails extends BaseEntity{
 
 

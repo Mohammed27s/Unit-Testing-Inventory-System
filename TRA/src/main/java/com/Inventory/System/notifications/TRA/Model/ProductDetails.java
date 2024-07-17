@@ -2,12 +2,11 @@ package com.Inventory.System.notifications.TRA.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "product_details")
+@Table(name = "product_details") //This is ProductDetails Table
 public class ProductDetails extends BaseEntity  {
 
     @Id

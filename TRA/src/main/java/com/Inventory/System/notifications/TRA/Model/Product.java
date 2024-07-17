@@ -6,7 +6,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "product")
+@Table(name = "product") //This is Product Table
 public class Product extends BaseEntity {
 
 

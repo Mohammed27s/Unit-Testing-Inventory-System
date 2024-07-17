@@ -1,15 +1,13 @@
 package com.Inventory.System.notifications.TRA.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Data;
 import java.util.Date;
 import java.util.List;
 
 @Data
 @Entity
+@Table(name = "invoice") //This is is Invoice Table
 public class Invoice extends BaseEntity {
 
     String invoiceNumber;

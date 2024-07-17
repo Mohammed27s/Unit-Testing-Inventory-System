@@ -3,12 +3,14 @@ package com.Inventory.System.notifications.TRA.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
 @Entity
+@Table(name = "inventory") //This is Inventory Table
 public class Inventory extends BaseEntity {
 
     @OneToMany

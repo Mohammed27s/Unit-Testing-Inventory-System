@@ -1,13 +1,11 @@
 package com.Inventory.System.notifications.TRA.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
+@Table(name = "user") //This is User Table
 public class User extends BaseEntity{
 
     String name;

@@ -3,6 +3,7 @@ package com.Inventory.System.notifications.TRA.Model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.util.Date;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "supplier") //This is Supplier Table
 public class Supplier extends BaseEntity{
 
     String supplierName; //This is company name
