@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/invoice")
+@RequestMapping("/invoice") //This is the main Invoice directory
 public class InvoiceController {
 
     @Autowired
@@ -30,7 +30,7 @@ public class InvoiceController {
     SlackService slackService;
 
     // Endpoint to create an invoice
-    @PostMapping("createInvoice")
+    @PostMapping("createInvoice") //This is for creating new Invoice
     public Invoice createInvoice(Invoice invoice) throws Exception {
         slackService.sendMessage("mohammed", "Testing Slack");
         return invoiceService.createInvoice(invoice);
@@ -54,7 +54,7 @@ public class InvoiceController {
 
     // Scheduled task to generate a weekly invoice report
     @Scheduled(cron = "0 0 9 * * 0") // Runs every Sunday at 9:00 AM
-    @PostMapping("The week Report list")
+    @PostMapping("The week Report list") //This is for generating new reports weekly
     public void weeklyInvoiceReport() {
         Date today = new Date();
         Date startDate = DateHelperUtils.subtractDays(today, 6); // Previous 7 days
@@ -72,7 +72,7 @@ public class InvoiceController {
         report.append("\nOverdue Invoices:\n");
         appendInvoicesToReport(report, overdueInvoices);
 
-        slackService.sendMessage("taiba", report.toString());
+        slackService.sendMessage("Mohammed", report.toString());
     }
 
     // Helper method to append invoice details to a report

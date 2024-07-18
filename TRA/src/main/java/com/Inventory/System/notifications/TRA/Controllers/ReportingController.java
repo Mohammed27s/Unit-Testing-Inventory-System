@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/report")
+@RequestMapping("/report") //This is the main report directory
 public class ReportingController {
 
     private Inventory globalInventoryItem;

@@ -1,6 +1,5 @@
 package com.Inventory.System.notifications.TRA.Controllers;
 
-
 import com.Inventory.System.notifications.TRA.DTO.ProductDTO;
 import com.Inventory.System.notifications.TRA.Model.Product;
 import com.Inventory.System.notifications.TRA.Repository.ProductRepo;
@@ -27,7 +26,7 @@ public class ProductController {
 
 
     // Endpoint to add a new product.
-    @PostMapping("add")
+    @PostMapping("add") //This is for adding new product
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
@@ -36,7 +35,7 @@ public class ProductController {
     private SlackService slackService;
 
     // Endpoint to delete a product by its ID.
-    @PostMapping("delete")
+    @PostMapping("delete") //This is for deleting product
     public ResponseEntity<?> delete(@RequestParam Integer id) throws Exception {
         try {
             String result = productService.deleteProduct(id);
@@ -48,7 +47,7 @@ public class ProductController {
     }
 
     // Endpoint to update a product's quantity by its ID.
-    @PutMapping("update")
+    @PutMapping("update") //This is for updating the product body (JSON)
     public ResponseEntity<?> updateProduct(@RequestParam Integer id, @RequestParam Integer quantity) throws Exception {
         try {
             String result = productService.updateProduct(id, quantity);
@@ -60,7 +59,7 @@ public class ProductController {
     }
 
     // Endpoint to retrieve all products.
-    @GetMapping("getAll")
+    @GetMapping("getAll") //This is for fetching all data
     public List<ProductDTO> getProducts() {
         return productService.getProducts();
     }

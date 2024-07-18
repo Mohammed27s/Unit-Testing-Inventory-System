@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/supplier")
+@RequestMapping("/supplier") //This is the main supplier directory
 public class SupplierController {
 
     @Autowired
@@ -24,13 +24,13 @@ public class SupplierController {
     SupplierService supplierService;
 
     // Endpoint to add a new supplier
-    @PostMapping("add")
+    @PostMapping("add") //This is for Adding new Supplier Information
     public Supplier addSupplier(@RequestBody Supplier supplier) {
         return supplierService.addSupplier(supplier);
     }
 
     // Endpoint to update an existing supplier
-    @PutMapping("update")
+    @PutMapping("update") //This is for Updating Supplier body (JSON)
     public <T> ResponseEntity<T> updateSupplier(@RequestParam Integer id) {
         try {
             String result = supplierService.updateSupplier(id);
@@ -41,7 +41,7 @@ public class SupplierController {
     }
 
     // Endpoint to delete a supplier by ID
-    @PostMapping("remove")
+    @PostMapping("remove") //This is for removing Supplier information
     public <T> ResponseEntity<T> delete(@RequestParam Integer id) {
         try {
             String result = supplierService.deleteSupplier(id);
@@ -52,7 +52,7 @@ public class SupplierController {
     }
 
     // Endpoint to get all suppliers
-    @GetMapping("allData")
+    @GetMapping("allData") //This is for fetching all data
     public List<SupplierDTO> getSupplier() {
         return supplierService.getSupplier();
     }

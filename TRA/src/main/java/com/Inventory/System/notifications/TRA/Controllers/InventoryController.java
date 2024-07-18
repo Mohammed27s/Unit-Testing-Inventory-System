@@ -1,7 +1,5 @@
 package com.Inventory.System.notifications.TRA.Controllers;
 
-
-
 import com.Inventory.System.notifications.TRA.DTO.InventoryDTO;
 import com.Inventory.System.notifications.TRA.Model.Inventory;
 import com.Inventory.System.notifications.TRA.Services.EmailService;
@@ -13,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Inventory")
+@RequestMapping("/Inventory") //This is the main Inventory directory
 public class InventoryController {
 
     @Autowired
@@ -26,19 +24,19 @@ public class InventoryController {
     private SlackService slackService;
 
     // Receive new stock
-    @PostMapping("save")
+    @PostMapping("save") //This is for creating new Inventory
     public Inventory receiveStock(@RequestBody Inventory inventory) {
         return inventoryService.saveInventory(inventory);
     }
 
     // Write off inventory item
-    @PutMapping("write")
+    @PutMapping("write") //This for updating the inventory body
     public String writeOff(@RequestParam Integer id) {
         return inventoryService.writeOff(id);
     }
 
     // Get all inventory items
-    @GetMapping("getAll")
+    @GetMapping("getAll") //This is for fetching all data
     public List<InventoryDTO> getInventory() {
         return inventoryService.getInventory();
     }
